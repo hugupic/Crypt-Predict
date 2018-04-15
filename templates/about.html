@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ url_for('static', filename='icon.ico') }}">
+
+    <title>Crypt Predict</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='narrow-jumbotron.css') }}">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <header class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link" href="/index">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/about">About</a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Crypt Predict</h3>
+      </header>
+
+      <main role="main">
+        <div class="row marketing">
+			<h4>What is Crypt Predict?</h4>
+            <p>Crypt Predict is a project completed as part of my final year in college, 
+			it is a Web Application that aims to allow for generating of price predictions with minimum effort on the user' side.</p>
+			
+			<h4>What Algorithm is used for generating predictions?</h4>
+            <p>Crypt Predict uses a combination of a Bayesian Linear Regression as well as Time Series Analysis to a certain extent.
+			The inspiration for the algorithm largely came from <a href="https://arxiv.org/pdf/1410.1231v1.pdf">this paper</a> published by MIT.</p>
+			
+			<h4>What Data is Used?</h4>
+            <p>Data regarding Current Price, Ask Volume, Bid Volume was collected every 20 seconds through the API provided by OKCoin.
+			In total over 3 months worth of data was collected, coming to over 113,000 individual entries.</p>
+        </div>
+      </main>
+
+      <footer class="footer">
+      </footer>
+
+    </div> <!-- /container -->
+  </body>
+</html>

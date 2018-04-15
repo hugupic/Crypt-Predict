@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<script language="javascript" type="text/javascript">
+		function validation(){
+			var btc_ = document.getElementById("btc-check").checked;
+			var eth_ = document.getElementById("eth-check").checked;
+			var ltc_ = document.getElementById("ltc-check").checked;
+			
+			if(!btc_ && !eth_ && !ltc_){
+				alert("You must select at least one Cryptocurrency.");
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+	</script>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ url_for('static', filename='icon.ico') }}">
+
+    <title>Crypt Predict</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='narrow-jumbotron.css') }}">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <header class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link active" href="/index">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Crypt Predict</h3>
+      </header>
+
+      <main role="main">
+		<div class="jumbotron">
+          <h2 class="display-3">Select Parameters</h2>
+          <p class="lead">Price Predictions can take up to 40 seconds per cryptocurrency.<br>
+						Accuracy Tests can take up to 60 seconds per crypocurrency.</p>
+		  
+			<form name="inputForm" action="/submit" onsubmit= "return validation()" method='POST'>
+				<input type="checkbox" name="btc-check" id="btc-check"> Bitcoin &emsp;
+				<input type="checkbox" name="eth-check" id="eth-check"> Ethereum &emsp;
+				<input type="checkbox" name="ltc-check" id="ltc-check"> Litecoin<br><br>
+				
+				<select name="method">
+					<option value="predict">Price Prediction</option>
+					<option value="test">Test Accuracy</option>
+				</select> Method &emsp;
+				<select name="interval">
+					<option value="20">20 Seconds</option>
+					<option value="40">40 Seconds</option>
+					<option value="60">60 Seconds</option>
+					<option value="80">80 Seconds</option>
+				</select> Prediction Intervals<br><br>
+				<input class="btn btn-lg btn-success" type="submit" value="Submit">
+			</form>
+        </div>
+        
+
+        <div class="row marketing">
+          <div class="col-lg-6">
+			
+			{% if btc_acc != false %}
+				<h4>Bitcoin Accuracy : {{ btc_acc }}%</h4> 
+			{% endif %}<br><br>
+			
+			{% if eth_acc != false %}
+				<h4>Ethereum Accuracy : {{ eth_acc }}%</h4> 
+			{% endif %}<br><br>
+			
+			{% if ltc_acc != false %}
+				<h4>Litecoin Accuracy : {{ ltc_acc }}%</h4> 
+			{% endif %}<br><br>
+
+          </div>
+
+          <div class="col-lg-6">
+            <h4>Price Prediction Method</h4>
+            <p>This method generates a prediction of the future price points of the selected Cryptocurrency.</p>
+
+            <h4>Test Accuracy Method</h4>
+            <p>This method tests the accuracy of the model by making predictions for a subsection of data and comparing them to the data we have for the predicted time period.</p>
+
+            <h4>Prediction Intervals</h4>
+            <p>These denote the time between each predicted price point, thus additionally denoting the length of time the prediction is for.</p>
+          </div>
+        </div>
+
+      </main>
+
+      <footer class="footer">
+      </footer>
+
+    </div> <!-- /container -->
+  </body>
+</html>

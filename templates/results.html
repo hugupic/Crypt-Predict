@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ url_for('static', filename='icon.ico') }}">
+
+    <title>Crypt Predict</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='narrow-jumbotron.css') }}">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <header class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link" href="/index">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Crypt Predict</h3>
+      </header>
+	  
+      <main role="main">
+		{% if btc_div != false %}
+			<h4>Bitcoin</h4>
+			{{ btc_div }}<br>
+		{% endif %}
+		
+		{% if eth_div != false %}
+			<h4>Ethereum</h4>
+			{{ eth_div }}<br>
+		{% endif %}
+		
+		{% if ltc_div != false %}
+			<h4>Litecoin</h4>
+			{{ ltc_div }}
+		{% endif %}
+		
+      </main>
+
+      <footer class="footer">
+      </footer>
+
+    </div> <!-- /container -->
+  </body>
+</html>
