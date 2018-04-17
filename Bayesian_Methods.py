@@ -31,7 +31,6 @@ def split_prices(df):
             count = count+1
             
     except:
-        raise ValueError('Issue splitting dataframe into individual price arrays')
         SN.send_notification("Bayesian_Methods.py - split_prices() -- ")
         pass
     

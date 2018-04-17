@@ -33,7 +33,6 @@ def add_entries(crypto, act_vals, pred_vals):
             index += 1
         
         except:
-            raise ValueError('Error occured adding new entry to accuracy database')
             SN.send_notification("Accuracy_Methods.py - add_entries() -- ")
             pass
         
@@ -60,6 +59,5 @@ def calculate_accuracy(crypto):
         return overall_acc
     
     except:
-        raise ValueError('Error occured calculating accuracy')
         SN.send_notification("Accuracy_Methods.py - calculate_accuracy() -- ")
         pass

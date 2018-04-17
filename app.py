@@ -37,7 +37,6 @@ def submit_form():
     ltc = request.form.get('ltc-check')
     method = str(request.form.get('method'))
     time_interval = int(request.form.get('interval'))
-    # TODO: Fix data filling issue
     fill_missing = False
     
     btc_graph = False

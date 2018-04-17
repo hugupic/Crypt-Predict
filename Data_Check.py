@@ -67,7 +67,6 @@ def run_check(data, freq, fill):
         data = drop_data(data)
     
     else:
-        raise ValueError('Fill was not recognised')
         SN.send_notification("Data_Check.py - run_check() -- ")
         pass
     return data

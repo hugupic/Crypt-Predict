@@ -48,7 +48,6 @@ def run_queries():
         
         print("Tick")
     else:
-        raise ValueError('Error has occured when querying OKCoin API')
         SN.send_notification("Data_Collection.py - run_queries() -- ")
     return
 
@@ -110,7 +109,6 @@ def main():
             run_queries()
             time.sleep(20.0 - ((time.time() - start_time) % 20.0))
         except:
-            raise ValueError('Error occured when attempting to run Data Collection queries')
             SN.send_notification("Data_Collection.py - run_queries() -- ")
             pass
 
