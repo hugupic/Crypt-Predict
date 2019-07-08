@@ -1,6 +1,6 @@
 Flask==0.12.2
 numpy==1.14.2
-pandas=0.22.0
+pandas==0.22.0
 plotly==2.5.1
 pytz==2018.3
 requests==2.18.4
