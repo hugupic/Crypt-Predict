@@ -34,15 +34,15 @@ def run_queries():
     ltc_str = str(ltc_data)
     
     if(btc_str[:1] == "[" and eth_str[:1] == "[" and ltc_str[:1] == "[" ):
-        with open(r'btc_data.csv', 'a', newline = '') as btc:
+        with open(r'data/btc_data.csv', 'a', newline = '') as btc:
             writer = csv.writer(btc)
             writer.writerow(btc_data)
     
-        with open(r'eth_data.csv', 'a', newline = '') as eth:
+        with open(r'data/eth_data.csv', 'a', newline = '') as eth:
             writer = csv.writer(eth)
             writer.writerow(eth_data)
         
-        with open(r'ltc_data.csv', 'a', newline = '') as ltc:
+        with open(r'data/ltc_data.csv', 'a', newline = '') as ltc:
             writer = csv.writer(ltc)
             writer.writerow(ltc_data)
         
