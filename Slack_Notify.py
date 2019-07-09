@@ -22,9 +22,9 @@ def send_notification(msg):
     
     response = client.chat_postMessage(
         channel='#notifications',
-        text="Hello world!")
+        text=message)
     assert response["ok"]
-    assert response["message"]["text"] == "Hello world!"
+    assert response["message"]["text"] == message
     
     return
 
