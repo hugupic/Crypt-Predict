@@ -7,23 +7,24 @@ that occur during runtime.
 
 """
 
-from slackclient import SlackClient
+from slack import WebClient
 import traceback
 import sys
 
-slack_token = "#"
+SLACK_TOKEN = "#"
 
 def send_notification(msg):
-    sc = SlackClient(slack_token)
+    client = WebClient(token=slack_token)
     
     stack = traceback.format_exception_only(sys.last_type, sys.last_value)
     error = str(stack[len(stack)-1])
     message = msg + error
     
-    sc.api_call(
-            "chat.postMessage",
-            channel = "#notifications",
-            text = message)
+    response = client.chat_postMessage(
+        channel='#notifications',
+        text="Hello world!")
+    assert response["ok"]
+    assert response["message"]["text"] == "Hello world!"
     
     return
 
