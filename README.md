@@ -6,7 +6,7 @@ The aim of the project is to be able to predict with some degree of accuracy the
 
 ## Installation
 1. Clone the project.
-`git clone https://github.com/AdamsEatin/crypt-predict.git`
+`git clone https://github.com/hugupic/crypt-predict.git`
 2. Navigate to directory
 `cd crypt-predict`
 3. Install the requirements.
