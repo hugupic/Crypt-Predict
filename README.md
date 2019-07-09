@@ -1,7 +1,4 @@
 # Crypt Predict
-
-Crypt Predict is my chosen project for my 4th year of college.
-
 The aim of the project is to be able to predict with some degree of accuracy the future prices of Bitcoin, Ethereum and Litecoin. However it is intended to be designed in a manner that it would be simple for any Developer to implement any Cryptocurrency they wish. The process of generating this prediction should be kept as simple as possible to allow for users of all experience to utilise the application.
 
 ## Installation
@@ -12,17 +9,17 @@ The aim of the project is to be able to predict with some degree of accuracy the
 3. Install the requirements.
 `pip install -r requirements.txt`
 
-## Web Application Startup : Windows Powershell
+## Web Application Startup : Linux Shell
 1. Navigate to the directory containing the application.
-2. Open a powershell window within this directory.
+2. Open a shell window within this directory.
 3. Set the environment variable.
-`$env:FLASK_APP="app.py"`
+`export FLASK_APP="app.py"`
 4. Launch the flask application.
 `python -m flask run`
 
-## Data Collection Startup : Windows Powershell
+## Data Collection Startup : Linux Shell
 1. Navigate to the directory containing the application.
-2. Open a powershell window within this directory.
+2. Open a shell window within this directory.
 3. Start the data collection script.
 `python Data_Collection.py`
 
