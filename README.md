@@ -25,9 +25,8 @@ The aim of the project is to be able to predict with some degree of accuracy the
 
 ## Slack Configuration
 1. Navigate to the directory containing the application.
-2. Open 'Slack_Notify.py'.
-3. Replace the variable 'slack_token' with the provided API token for your Slack Workspace.
-4. Replace the content of the 'channel' string with your chosen Slack channel.
+2. Write the provided API token for your Slack Workspace in SLACK_TOKEN.txt.
+3. The default slack channel is #notifications, you can change that in Slack_notify.
 
 
 ## References
