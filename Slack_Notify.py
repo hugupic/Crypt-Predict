@@ -11,7 +11,7 @@ from slack import WebClient
 import traceback
 import sys
 
-SLACK_TOKEN = "#"
+SLACK_TOKEN = open('SLACK_TOKEN.txt', 'r')
 
 def send_notification(msg):
     client = WebClient(token=slack_token)
