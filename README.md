@@ -3,6 +3,7 @@ The aim of the project is to be able to predict with some degree of accuracy the
 
 ## Docker
 [![](https://images.microbadger.com/badges/image/hugupic/crypt-predict.svg)](https://microbadger.com/images/hugupic/crypt-predict "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/hugupic/crypt-predict.svg)](https://microbadger.com/images/hugupic/crypt-predict "Get your own version badge on microbadger.com")
+
   You can find a docker of this project at hugupic/crypt-predict
 
 ## Installation
