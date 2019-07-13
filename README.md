@@ -1,6 +1,10 @@
 # Crypt Predict
 The aim of the project is to be able to predict with some degree of accuracy the future prices of Bitcoin, Ethereum and Litecoin. However it is intended to be designed in a manner that it would be simple for any Developer to implement any Cryptocurrency they wish. The process of generating this prediction should be kept as simple as possible to allow for users of all experience to utilise the application.
 
+## Docker
+[![](https://images.microbadger.com/badges/image/hugupic/crypt-predict.svg)](https://microbadger.com/images/hugupic/crypt-predict "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/hugupic/crypt-predict.svg)](https://microbadger.com/images/hugupic/crypt-predict "Get your own version badge on microbadger.com")
+  You can find a docker of this project at hugupic/crypt-predict
+
 ## Installation
 1. Clone the project.
 `git clone https://github.com/hugupic/crypt-predict.git`
