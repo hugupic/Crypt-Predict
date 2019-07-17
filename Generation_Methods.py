@@ -230,11 +230,13 @@ def generate_test(data):
 def generate_graph(method, act_data, pred_data, time):
     if method == "predict":
         graph = plot({"data": [Scatter(x=time, y=pred_data)],
-                    "layout": Layout(width="800", height="500", margin=Margin(t="20"))},
+                    # "layout": Layout(width="800", height="500", margin=Margin(t="20"))
+		     },
                     output_type='div')
     
     elif method == "test":
         graph = plot({"data": [Scatter(showlegend=True, name="Predicted", x=time, y=pred_data),Scatter(showlegend=True, name="Actual", x=time, y=act_data) ],
-                    "layout": Layout(width="800", height="500", margin=Margin(t="20"),showlegend=True)},
+                    # "layout": Layout(width="800", height="500", margin=Margin(t="20"),showlegend=True)
+		     },
                     output_type='div')
     return graph
