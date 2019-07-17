@@ -20,7 +20,7 @@ The aim of the project is to be able to predict with some degree of accuracy the
 3. Set the environment variable.
 `export FLASK_APP="app.py"`
 4. Launch the flask application.
-`python -m flask run`
+`python -m flask run --host=0.0.0.0`
 
 ## Data Collection Startup : Linux Shell
 1. Navigate to the directory containing the application.
